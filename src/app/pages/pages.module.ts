@@ -4,6 +4,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { MoviesPageComponent } from './movies-page/movies-page.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { CetegoryPageComponent } from './cetegory-page/cetegory-page.component';
+import { CategoryPageComponent } from './category-page/category-page.component';
 
 
 
@@ -12,7 +13,8 @@ import { CetegoryPageComponent } from './cetegory-page/cetegory-page.component';
     HomePageComponent,
     MoviesPageComponent,
     SearchPageComponent,
-    CetegoryPageComponent
+    CetegoryPageComponent,
+    CategoryPageComponent
   ],
   imports: [
     CommonModule
