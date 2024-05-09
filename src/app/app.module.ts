@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { PagesModule } from './pages/pages.module';
+import { ComponentsModule } from './components/components.module';
 
 import { AppComponent } from './app.component';
 
@@ -16,8 +17,9 @@ import { AppComponent } from './app.component';
     BrowserModule,
     HttpClientModule,
     RouterModule,
+    PagesModule,
+    ComponentsModule,
     AppRoutingModule,
-    PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

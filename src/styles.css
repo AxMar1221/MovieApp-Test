@@ -53,6 +53,14 @@ p {
 hr{
   color: white;
 }
+.custom-navbar {
+  background-color: #10216a !important;
+}
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link,
+.custom-navbar .btn {
+  color: #ffffff !important;
+}
 .navbar-brand {
   font-weight: 200;
   color: #bd4c5f !important;
