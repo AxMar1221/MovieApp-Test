@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+/* fonts */
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+/* Global styles */
+body {
+  background-color: #10216a;
+}
+h1,h2,h3,h4,h5 {
+  font-weight: 200;
+  color: white;
+}
+p {
+  color: white;
+}
+hr{
+  color: white;
+}
+.navbar-brand {
+  font-weight: 200;
+  color: #bd4c5f !important;
+}
+.btn-outline-success {
+  border-color: #bd4c5f !important;;
+  color: #bd4c5f !important;;
+}
+.btn-outline-success:hover {
+  background-color: #272a36;
+  color: white !important;
+}
+.block {
+  display:block;
+}
