@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { Cartelera, Movie } from '../interfaces/cartelera';
+import { Details } from '../interfaces/movieDetails';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +24,10 @@ export class MoviesService {
     }
   }
 
+  resetPage(){
+    this.moviePage = 1;
+  }
+
   getCartelera() : Observable<Movie[]> {
 
     if ( this.loading ) {
@@ -39,6 +44,12 @@ export class MoviesService {
         this.loading = false;
       })
     )
+  }
+
+  getMovieDetails(id:string) {
+    return this.http.get<Details>(`${ this.baseUrl}/movie/${id}`, {
+      params: this.params
+    })
   }
 
   searchMovie(text: string):Observable<Movie[]>{

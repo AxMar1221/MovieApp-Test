@@ -6,6 +6,7 @@ import { PopularityPageComponent } from './popularity-page/popularity-page.compo
 import { SearchPageComponent } from './search-page/search-page.component';
 import { VotePageComponent } from './vote-page/vote-page.component';
 import { ComponentsModule } from '../components/components.module';
+import { PipesModule } from '../pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ComponentsModule } from '../components/components.module';
   imports: [
     CommonModule,
     ComponentsModule,
+    PipesModule
   ]
 })
 export class PagesModule { }

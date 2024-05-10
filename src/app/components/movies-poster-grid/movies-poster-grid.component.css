@@ -4,4 +4,5 @@
   box-shadow: 0px 0px 10px rgba(58, 85, 183, 0.857);
   max-height: 250px;
   min-height: 145px;
+  cursor: pointer;
 }

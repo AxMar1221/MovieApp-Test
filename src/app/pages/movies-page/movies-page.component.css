@@ -1,0 +1,9 @@
+.poster {
+  height: 550px;
+  border-radius: 15px;
+  margin: 5px;
+  box-shadow: 0px 0px 10px rgba(58, 85, 183, 0.857);
+}
+.details {
+  text-align: justify;
+}
