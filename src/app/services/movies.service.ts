@@ -51,6 +51,40 @@ export class MoviesService {
       map( resp => resp.results )
     )
   }
+
+  topMovie() : Observable<Movie[]>{
+    if ( this.loading ) {
+      return of([]);
+    }
+
+    this.loading = true;
+    return this.http.get<Cartelera>(`${this.baseUrl}/movie/top_rated`, {
+      params: this.params
+    }).pipe(
+      map( (resp) => resp.results ),
+      tap( () => {
+        this.moviePage += 1;
+        this.loading = false;
+      })
+    )
+  }
+
+  mostPopular() : Observable<Movie[]>{
+    if ( this.loading ) {
+      return of([]);
+    }
+
+    this.loading = true;
+    return this.http.get<Cartelera>(`${this.baseUrl}/movie/popular`, {
+      params: this.params
+    }).pipe(
+      map( (resp) => resp.results ),
+      tap( () => {
+        this.moviePage += 1;
+        this.loading = false;
+      })
+    )
+  }
 }
 
 

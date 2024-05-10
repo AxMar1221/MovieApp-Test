@@ -1,1 +1,8 @@
-<p>vote-page works!</p>
+<h1>Películas mejor valoradas</h1>
+<hr>
+<div class="row" *ngIf="movies.length > 0">
+  <div class="col">
+    <app-movies-poster-grid [movies]="movies"></app-movies-poster-grid>
+  </div>
+</div>
+

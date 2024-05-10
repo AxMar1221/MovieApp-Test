@@ -1,1 +1,8 @@
-<p>popularity-page works!</p>
+<h1>Películas más populares</h1>
+<hr>
+<div class="row" *ngIf="movies.length > 0">
+  <div class="col">
+    <app-movies-poster-grid [movies]="movies"></app-movies-poster-grid>
+  </div>
+</div>
+
