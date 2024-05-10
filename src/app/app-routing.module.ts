@@ -11,8 +11,8 @@ const routes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'movie/:id', component: MoviesPageComponent },
   { path: 'search/:text', component: SearchPageComponent },
-  { path: 'popularity', component: PopularityPageComponent },
-  { path: 'vote', component: VotePageComponent },
+  { path: 'popular', component: PopularityPageComponent },
+  { path: 'top_rated', component: VotePageComponent },
   { path: '**', redirectTo: '/home' },
 ];
 @NgModule({
