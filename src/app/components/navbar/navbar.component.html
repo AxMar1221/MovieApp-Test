@@ -7,7 +7,7 @@
           <a class="nav-link active" aria-current="page" routerLink="/home">Películas</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Categorias
           </a>
           <ul class="dropdown-menu">
@@ -16,10 +16,13 @@
           </ul>
         </li>
       </ul>
-      <form class="d-flex roboto-regular" role="search">
-        <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
-        <button class="btn btn-outline-primary" type="submit">Buscar</button>
-      </form>
+      <div class="d-flex roboto-regular" role="search">
+        <input #txtSearch (keyup.enter)="searchMovie( txtSearch.value )" class="form-control me-2" type="search"
+          placeholder="Buscar..." aria-label="Search">
+        <button (click)="searchMovie( txtSearch.value )" class="btn btn-outline-primary" type="submit">
+          Buscar
+        </button>
+      </div>
     </div>
   </div>
 </nav>
