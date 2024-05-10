@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Details } from 'src/app/interfaces/movieDetails';
 import { MoviesService } from 'src/app/services/movies.service';
@@ -9,7 +9,7 @@ import { MoviesService } from 'src/app/services/movies.service';
   templateUrl: './movies-page.component.html',
   styleUrls: ['./movies-page.component.css']
 })
-export class MoviesPageComponent implements OnInit{
+export class MoviesPageComponent implements OnInit, OnDestroy{
 
   public movie!: Details;
 
@@ -30,4 +30,7 @@ export class MoviesPageComponent implements OnInit{
     this.location.back();
   }
 
+  ngOnDestroy(): void {
+    this.moviesService.resetPage();
+  }
 }

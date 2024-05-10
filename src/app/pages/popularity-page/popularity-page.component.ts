@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener  } from '@angular/core';
+import { Component, OnInit, HostListener, OnDestroy  } from '@angular/core';
 import { Movie } from 'src/app/interfaces/cartelera';
 import { MoviesService } from 'src/app/services/movies.service';
 
@@ -7,7 +7,7 @@ import { MoviesService } from 'src/app/services/movies.service';
   templateUrl: './popularity-page.component.html',
   styleUrls: ['./popularity-page.component.css']
 })
-export class PopularityPageComponent  implements OnInit {
+export class PopularityPageComponent  implements OnInit, OnDestroy {
   public movies: Movie[] = [];
 
   @HostListener('window:scroll',['$event'])
@@ -31,5 +31,9 @@ export class PopularityPageComponent  implements OnInit {
 
   ngOnInit(): void {
 
+  }
+
+  ngOnDestroy(): void {
+    this.moviesService.resetPage();
   }
 }

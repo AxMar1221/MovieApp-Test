@@ -1,12 +1,14 @@
 <div class="row" *ngIf="movie">
 
   <div class="col-md-6">
-      <img [src]="movie.poster_path | poster" class="poster" [alt]="movie.title">
+    <img [src]="movie.poster_path | poster" class="poster" [alt]="movie.title">
   </div>
   <div class="col-md-6 details">
     <h3>Titulo: {{movie.original_title}}</h3>
+    <hr>
     <h5>Fecha de lanzamiento: {{movie.release_date}}</h5>
     <h5>Fecha de lanzamiento: {{movie.overview}}</h5>
+    <hr>
     <div class="row">
       <div class="col">
         <button class="btn btn-outline-primary mt-3" (click)="onBack()">

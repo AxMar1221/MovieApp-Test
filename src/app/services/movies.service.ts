@@ -96,6 +96,23 @@ export class MoviesService {
       })
     )
   }
+
+  upComing() : Observable<Movie[]>{
+    if ( this.loading ) {
+      return of([]);
+    }
+
+    this.loading = true;
+    return this.http.get<Cartelera>(`${this.baseUrl}/movie/upcoming`, {
+      params: this.params
+    }).pipe(
+      map( (resp) => resp.results ),
+      tap( () => {
+        this.moviePage += 1;
+        this.loading = false;
+      })
+    )
+  }
 }
 
 

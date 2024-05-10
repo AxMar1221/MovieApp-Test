@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Movie } from 'src/app/interfaces/cartelera';
 import { MoviesService } from 'src/app/services/movies.service';
@@ -8,7 +8,7 @@ import { MoviesService } from 'src/app/services/movies.service';
   templateUrl: './search-page.component.html',
   styleUrls: ['./search-page.component.css']
 })
-export class SearchPageComponent implements OnInit{
+export class SearchPageComponent implements OnInit, OnDestroy{
 
   public text: string = "";
   public movies: Movie[] = [];
@@ -27,4 +27,7 @@ export class SearchPageComponent implements OnInit{
     });
   }
 
+  ngOnDestroy(): void {
+    this.moviesService.resetPage();
+  }
 }
