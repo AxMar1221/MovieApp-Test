@@ -5,6 +5,7 @@ import { MoviesPageComponent } from './movies-page/movies-page.component';
 import { PopularityPageComponent } from './popularity-page/popularity-page.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { VotePageComponent } from './vote-page/vote-page.component';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { VotePageComponent } from './vote-page/vote-page.component';
     VotePageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ComponentsModule,
   ]
 })
 export class PagesModule { }

@@ -58,7 +58,8 @@ hr{
 }
 .custom-navbar .navbar-brand,
 .custom-navbar .nav-link,
-.custom-navbar .btn {
+.custom-navbar .btn,
+.swiper-slide {
   color: #ffffff !important;
 }
 .navbar-brand {
