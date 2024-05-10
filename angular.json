@@ -92,6 +92,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/movie-app",
+            "netlifyToken": "",
+            "siteId": ""
+          }
         }
       }
     }
