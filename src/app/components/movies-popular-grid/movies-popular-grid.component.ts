@@ -3,11 +3,12 @@ import { Router } from '@angular/router';
 import { Movie } from 'src/app/interfaces/cartelera';
 
 @Component({
-  selector: 'app-movies-poster-grid',
-  templateUrl: './movies-poster-grid.component.html',
-  styleUrls: ['./movies-poster-grid.component.css']
+  selector: 'app-movies-popular-grid',
+  templateUrl: './movies-popular-grid.component.html',
+  styleUrls: ['./movies-popular-grid.component.css']
 })
-export class MoviesPosterGridComponent implements OnInit {
+
+export class MoviesPopularGridComponent implements OnInit {
   @Input() movies: Movie[];
 
   constructor( private router: Router) {
@@ -17,7 +18,12 @@ export class MoviesPosterGridComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  likeMovie(movie: Movie) {
+    movie.isFavorite = !movie.isFavorite;
+  }
+
   onMovieClick( movie: Movie ){
     this.router.navigate(['/movie', movie.id])
   }
 }
+

@@ -59,7 +59,8 @@ hr{
 .custom-navbar .navbar-brand,
 .custom-navbar .nav-link,
 .custom-navbar .btn,
-.swiper-slide {
+.swiper-slide,
+.navbar-toggler {
   color: #ffffff !important;
 }
 .navbar-brand {
